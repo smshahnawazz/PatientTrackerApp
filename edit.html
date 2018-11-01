@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Existing Record - Patient Tracker App</title>
+	<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+	<script type="text/javascript" src="JS/auth.js"></script>
+	<!--bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--End of Bootsrap-->
+    <link rel="stylesheet" href="CSS/style.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><body>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
+	<link rel="stylesheet" href="CSS/alertify.min.css" />
+	<script type="text/javascript" src="JS/alertify.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+	</head>
+	<body>
+	<!--Top navbar -->
+	<nav class="navbar navbar-color navbar-inverse animated fadeIn ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar navbar-color"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand navbar-color  header-link-style" href="#">Patient Tracker App</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="dashboard.html" class="navbar-color header-link-style"><span class="glyphicon glyphicon-dashboard navbar-color"></span>  Dashboard</a></li>
+        <li><a href="#" class="navbar-color  header-link-style" onclick="aboutUs()"><span class="glyphicon glyphicon-log-in"></span> About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<!--end of Top Nav bar-->
+	<div class="container">
+	<div class="add-form animated fadeIn">
+	<h2 class="app-heading">Patient Tracker</h2>
+	<h3 class="app-heading-dashboard text-center">Edit Record</h3>
+	<div class="row">
+		<div class="col-sm-6 form-group">
+			<label for="edit-id">Patient ID</label>
+			<div class="input-group">
+			<input type="number" class="form-control" id="edit-id" placeholder="Enter Patient ID" >
+			<span class="input-group-btn"><button type="button" class="btn btn-default" onclick="loadData()"/><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
+			</div>
+		</div>
+	
+		<div class="col-sm-6 form-group">
+			<label for="edit-name">Patient Name</label>
+			<input type="text" class="form-control" id="edit-name" placeholder="Enter Patient Name">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-age">Age</label>
+			<input type="number" class="form-control" id="edit-age" placeholder="Enter Patient Age">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-date">Appointment Date</label>
+			<input type="date" class="form-control" id="edit-date">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-disease">Disease</label>
+			<input type="text" class="form-control" id="edit-disease" placeholder="Enter Disease">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-medications">Medications</label>
+			<input type="email" class="form-control" id="edit-medications" placeholder="Enter Medications">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-weight">Weight (in KG)</label>
+			<input type="number" class="form-control" id="edit-weight" placeholder="Enter Weight">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-growth">Growth</label>
+			<input type="number" class="form-control" id="edit-growth" placeholder="Enter Growth">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-blood">Blood Group</label>
+			<select id="edit-blood" class="form-control">
+				<option>Select</option>
+				<option>A+</option>
+				<option>A-</option>
+				<option>B+</option>
+				<option>B-</option>
+				<option>AB+</option>
+				<option>AB-</option>
+				<option>O+</option>
+				<option>O-</option>
+			</select>
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-blood-pressure">Blood Pressure</label>
+			<input type="text" class="form-control" id="edit-blood-pressure" placeholder="Enter Blood Pressure">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-pulse-rate">Pulse Rate</label>
+			<input type="text" class="form-control" id="edit-pulse-rate" placeholder="Enter Pulse Rate">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-sugar">Sugar</label>
+			<input type="text" class="form-control" id="edit-sugar" placeholder="Enter Sugar">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-doctor">Doctor Assigned</label>
+			<input type="text" class="form-control" id="edit-doctor" placeholder="Enter Doctor Name">
+		</div>
+		<div class="col-sm-6 form-group">
+			<label for="edit-photo">Patient Photo</label>
+			<div class="input-group">
+			<input type="file" accept="image/png, image/jpeg" class="form-control" id="edit-photo" >
+			<span class="input-group-btn"><button type="button" class="btn btn-default" onclick="previewImage()" id="edit-preview" disabled><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button></span>
+			</div>
+		</div>
+		<div class="col-sm-6 form-group">
+			<button type="button" id="save" class="btn btn-block b btn-success" onclick="updateData()"> <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;&nbsp;&nbsp;Update Record</button>
+		</div>
+		<div class="col-sm-6 form-group">
+			<button type="button" id="clear" class="btn btn-block btn-danger" onclick="editClearData()"><span class="glyphicon glyphicon-floppy-remove"></span>&nbsp;&nbsp;&nbsp;&nbsp;Clear Form </button>
+		</div>
+				
+				
+		
+		
+	</div><!--end of row-->
+	</div>
+	</div> 
+
+	<script type="text/javascript" src="JS/script.js"></script>
+	<script type="text/javascript">
+		authenticationChecker();
+	</script>
+</body>
+</html>

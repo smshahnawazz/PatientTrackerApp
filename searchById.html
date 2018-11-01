@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Patient's Record - Patient Tracker</title>
+	<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+	<script type="text/javascript" src="JS/auth.js"></script>
+	<!--bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--End of Bootsrap-->
+    <link rel="stylesheet" href="CSS/style.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><body>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+</head>
+<body>	
+	<!--Top navbar -->
+	<nav class="navbar navbar-color navbar-inverse animated fadeIn">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar navbar-color"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand navbar-color  header-link-style" href="#">Patient Tracker App</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="dashboard.html" class="navbar-color header-link-style"><span class="glyphicon glyphicon-dashboard navbar-color"></span>  Dashboard</a></li>
+        <li><a href="#" class="navbar-color  header-link-style" onclick="aboutUs()"><span class="glyphicon glyphicon-log-in"></span>  About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<!--end of Top Nav bar-->
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3">
+		
+		</div>
+		<div class="col-sm-6">
+			<div class="delete-box animated fadeIn">
+				<h2 class="app-heading">Patient Tracker</h2>
+				<h3 class="text-center">Search Patient's Record</h3>
+				<div class="form-group">
+					<label for="delete-patient-id">Select Search Criteria:</label>
+						<select id="search" class="form-control" onchange="searchCriteria()">
+							<option value="Search By ID">How do you want to search?</option>
+							<option value="Search By ID">Search By Patient ID</option>
+							<option value="Search By Patient's Name">Search By Patient's Name</option>
+							<option value="Search By Appointment Date">Search By Appointment Date</option>
+						</select>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" id='search-criteria' >
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+		
+		</div>
+    </div> <!--end of Row-->
+	</div> <!--end of main container-fluid-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3"></div>		
+			<div class="col-sm-6">
+			<div class="container-fluid" id="data" style="border:0px solid #ccc; height:350px; overflow:auto; margin-bottom:15px;">
+			
+			</div>		
+			</div>
+			<div class="col-sm-3"></div>		
+		</div>
+	</div>	
+
+	<script type="text/javascript" src="JS/script.js"></script>
+	<script type="text/javascript">
+		authenticationChecker();
+	</script>
+</body>
+</html>

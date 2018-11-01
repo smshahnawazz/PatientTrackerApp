@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign up - Create a New Account! - Patient Tracker App</title>
+	
+	<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+	<script type="text/javascript" src="JS/auth.js"></script>
+	<!--bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--End of Bootsrap-->
+    <link rel="stylesheet" href="CSS/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+</head>
+<body>
+	<!--Top navbar -->
+	<nav class="navbar navbar-color navbar-inverse animated fadeIn">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar navbar-color"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand navbar-color" href="#">Patient Tracker App</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html" class="navbar-color  header-link-style"><span class="glyphicon glyphicon-user navbar-color"></span> Login</a></li>
+        <li><a href="#" class="navbar-color  header-link-style" onclick="aboutUs()"><span class="glyphicon glyphicon-log-in"></span> About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+	<!--end of Top Nav bar-->
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-4">
+		
+		</div>
+		<div class="col-sm-4 ">
+			<div class="sign-up animated fadeIn">
+				<h3 class="app-heading">Patient Tracker</h3>
+				<h3 class="text-center">Create Account</h3>
+				<p class="text-center">Create your account Now. It hardly takes 30 Seconds</p>
+				<div class="container-fluid">
+				<div class="row">
+					<input type="text" class="col-xs-12  input-space form-control" placeholder="Enter your Username" id="signup-username"/>
+					<input type="email" class="col-xs-12  input-space form-control" placeholder="Enter your Email" id="signup-email"/>
+					<input type="password" class="col-xs-12 input-space form-control" placeholder="Enter your Password" id="signup-password"/>
+					<input type="password" class="col-xs-12 input-space form-control" placeholder="Repeat Password" id="signup-rpassword"/>
+					<input type="submit" class="col-xs-12 btn btn-mine btn-block input-space" value="Create Account" id="signup-btn" onclick = "signUp()" />
+					<div class="col-xs-12 text-center input-space"><a href="login.html">Already have an account?</a></div>
+				</div>
+				</div>
+				</div><!--end of form wrapper-->
+			</div><!--end of col-md-4 --> 
+	
+		<div class="col-sm-4">
+		
+		</div>
+		</div><!--end of row-->	
+	</div>
+
+
+	
+	<script type="text/javascript" src="JS/script.js"></script>
+</body>
+</html>

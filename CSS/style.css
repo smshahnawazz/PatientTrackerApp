@@ -1,0 +1,254 @@
+body{
+overflow-x:hidden;
+background:#f4f6f6;
+}
+
+.navbar-color{
+background:#1bbc9b;
+color:white !important;
+border:0px;
+}
+
+.header-link-style:hover{
+background:#1aad8f !important;
+}
+.form-wrapper{
+	width:100%;
+	border:0px solid;
+	background:#eeeff1;
+	margin-top:10%;
+	padding-right:10%;
+	padding-left:10%;
+	padding-top:2%;
+	position:relative;
+}
+
+.app-heading{
+font-family: 'Kaushan Script', cursive;
+text-align:center;
+font-size:36px;
+}
+.sign-up{
+	width:100%;
+	border:0px solid;
+	background:#eeeff1;
+	margin-top:10%;
+	padding-right:10%;
+	padding-left:10%;
+	padding-top:3%;
+	position:relative;
+}
+
+.input-space{
+margin-top:20px;
+border-radius:0px;
+height:49px;
+}
+.btn-mine{
+background:#1bbc9b;
+color:white;
+}
+.btn-mine:hover{
+background:#1aad8f !important;
+color:white;
+}
+
+.sign-up input[type="text"]{
+background-image:url("../icons/user.png");
+background-position:top right;
+background-repeat:no-repeat;
+transition:all .6s;
+}
+.form-wrapper input[type="email"], .sign-up input[type="email"]{
+background-image:url("../icons/email.png");
+background-position:top right;
+background-repeat:no-repeat;
+transition:all .6s;
+}
+
+.form-wrapper input[type="password"],.sign-up input[type="password"]{
+ background-image:url("../icons/password.png");
+ background-position:top right;
+background-repeat:no-repeat;
+transition:all .6s;
+}
+
+.form-wrapper input[type="email"]:focus, .form-wrapper input[type="password"]:focus,.sign-up input[type="text"]:focus ,.sign-up input[type="password"]:focus,.sign-up input[type="email"]:focus{
+background-position:top left;
+padding-left:60px;
+font-size:16px;
+}
+input[placeholder]{
+font-size:16px;
+}
+.footer{
+background:#1bbc9b;
+height:70px;
+width:100%;
+position:absolute;
+bottom:0;
+left:0;
+color:white;
+line-height:60px;
+}
+.footer a{
+color:white;
+text-decoration:underline;
+}
+
+/********************** Dashboard Styling **********************/ 
+.box{
+border:1px solid #1bbc9b;
+width:100%;
+margin-top:3%;
+background:#eeeff1;
+padding: 0% 3% 3% 3%;
+margin-bottom:20px;
+}
+.app-heading-dashboard{
+margin-bottom:3%;
+}
+.box input[type="button"]{
+width:100%;
+border:0px;
+height:100px;
+margin:1%;
+color:white;
+background-repeat:no-repeat;
+background-position:left center;
+transition:all .2s;
+}
+
+.add{
+background:url('../icons/add.png') #1bbc9b;
+}
+.edit{
+background:url('../icons/edit.png') #1bbc9b;
+}
+.delete{
+background:url('../icons/del.png') #1bbc9b;
+}
+.search{
+background:url('../icons/search.png') #1bbc9b;
+}
+.pdf{
+background:url('../icons/export.png') #1bbc9b;
+}
+.print{
+background:url('../icons/print.png') #1bbc9b;
+}
+
+.add:hover{
+background:url('../icons/add_hover.png') #1aad8f;
+}
+.edit:hover{
+background:url('../icons/edit_hover.png') #1aad8f;
+}
+.delete:hover{
+background:url('../icons/delete_hover.png') #1aad8f;
+}
+.search:hover{
+background:url('../icons/search_hover.png') #1aad8f;
+}
+.pdf:hover{
+background:url('../icons/export_hover.png') #1aad8f;
+}
+.print:hover{
+background:url('../icons/print_hover.png') #1aad8f;
+}
+#date-time{
+margin-top:5%; 
+height:20px;
+text-align:center;
+color:#1aad8f; 
+text-shadow:0px 0px 0.2px rgba(0,0,0,0.2);
+font-size:16px;
+}
+
+/********************** Add new Record Form styling And Delete Box Form **********************/ 
+.input:read-only{
+background:white;
+}
+.add-form, .delete-box, .print-box{
+border: 1px solid #1aad8f;
+width:100%;
+background:#eeeff1;
+padding:5%;
+margin-top:3%;
+margin-bottom:3%;
+}
+
+/********************** Alertify Custom Notifier **********************/ 
+.ajs-message.ajs-custom {
+border:2px solid white;
+border-radius:4px; 
+color: White; 
+ background-color:rgba(88, 181, 110, 0.9);
+ font-family:Arial; 
+ font-size:16px;
+ text-align:center;
+}
+
+.sweet-alert-img img{
+height:230px;
+width:200px;
+font-family:arial;
+padding:5px;
+border:2px solid #ccc;
+border-radius:5px;
+}
+.sweet-alert-icon img{
+height:130px;
+width:130px;
+padding:3px;
+border:2px solid #ccc;
+border-radius:100%;
+}
+
+
+/********************** Search by Name and Date data box styling **********************/ 
+#data::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+#data::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+#data::-webkit-scrollbar-thumb {
+    background: #D0D0D0;
+	border-radius:4px;
+	transition:all 2s;
+}
+
+/* Handle on hover */
+#data::-webkit-scrollbar-thumb:hover {
+    background: #8B8B8B; 
+}
+.date-time{
+font-size:22px;
+}
+/********************** Report Layout styling **********************/ 
+.table-printing{
+margin:30px 0px 0px 10px;
+font-size:16px;
+}
+.table-printing td{
+padding:15px !important;
+text-align:center;
+font-size:18px !important;
+}
+.table-printing th{
+padding-left:10px !important;
+}
+.printing-paragraph{
+text-align:center;
+margin-top:10px;
+font-size:18px !important;
+}
+.printing-heading{
+font-family: 'Kaushan Script', cursive;
+font-size:28px;
+}
