@@ -1,4 +1,4 @@
-# Patient-Tracker-App
+# Patient Tracker App
 This app will help the doctor to maintain patients record.
 
 Features:
