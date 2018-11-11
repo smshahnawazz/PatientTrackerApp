@@ -15,6 +15,5 @@ HTML 5, CSS3, bootstrap, Javascript ES6, Google firebase Authentication (Signup 
 Your feedback will be highly appreciated.
 
 App Link: https://patient-tracker-b3765.firebaseapp.com
-
                               OR
           https://smshahnawazz.github.io/PatientTrackerApp/
